@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+body{
+    font-family: 'Poppins',sans-serif;
+}
+
+.input--form{
+    @apply border border-gray-500/95 placeholder-gray-700 text-[1.1rem] py-[.3rem] px-[.5rem] outline-0 w-full
+}
+.button--form{
+    @apply cursor-pointer border py-[.1rem] px-[.6rem]
+}
+.error--form{
+    @apply text-[.85rem] absolute left-[.2rem] text-red-800/85 capitalize;
+  }

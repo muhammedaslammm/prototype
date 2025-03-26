@@ -1,10 +1,35 @@
 import Product from "../models/productModel.js";
+import cloudinary from "../config/cloudinary.js";
 import mongoose from "mongoose";
 
 const addProduct = async (req, res) => {
   try {
+    if (!req.files || req.files.length === 0)
+      return res
+        .status(400)
+        .json({ success: false, error: "no files found to procee" });
+
+    console.log("files:", req.files);
+    const uploadedImages = await Promise.all(
+      req.files.map(
+        (file) =>
+          new Promise((resolve, reject) => {
+            cloudinary.uploader
+              .upload_stream(
+                { folder: "bizdata_products" },
+                (error, result) => {
+                  if (error) reject(error);
+                  else resolve(result.secure_url);
+                }
+              )
+              .end(file.buffer);
+          })
+      )
+    );
+
     const { brand, product_name, description, price } = req.body;
     const new_product = new Product({
+      images: uploadedImages,
       brand,
       product_name,
       description,
@@ -14,7 +39,8 @@ const addProduct = async (req, res) => {
     console.log("product created");
     res.json({ success: true, message: "product created", product });
   } catch (error) {
-    res.json({ success: false, error: error.message });
+    console.log("server error :", error);
+    res.status(500).json({ success: false, error: error.message });
   }
 };
 
