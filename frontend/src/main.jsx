@@ -5,7 +5,6 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import "./index.css";
 import Application from "./Application.jsx";
 import AdminApp from "./adminApp.jsx";
 import Products from "./components/admin/Products.jsx";

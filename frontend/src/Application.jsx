@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./components/user/Navbar";
 import Body from "./components/user/Body";
-import "./application.css"
+import "./application.css";
 
 const App = () => {
   return (

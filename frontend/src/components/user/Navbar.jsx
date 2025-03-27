@@ -1,10 +1,17 @@
-import React, { useState } from "react";
-import { FaShoppingCart, FaUser, FaHeart, FaSearch, FaMapMarkerAlt, FaThLarge } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
+import {
+  FaShoppingCart,
+  FaUser,
+  FaHeart,
+  FaSearch,
+  FaMapMarkerAlt,
+  FaThLarge,
+} from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
   return (
     <header>
       <div className="container">
@@ -24,10 +31,10 @@ const Navbar = () => {
 
           {/* Location Button */}
           <div className="d-none d-lg-block col-xxl-3 col-md-2">
-              <button className="location-btn">
-                  <FaMapMarkerAlt />
-                  Location
-              </button>
+            <button className="location-btn">
+              <FaMapMarkerAlt />
+              Location
+            </button>
           </div>
 
           {/* Icons */}
@@ -49,8 +56,8 @@ const Navbar = () => {
 
       {/* Second Level */}
       {/* <nav className="navbar-bottom"> */}
-        {/* "All Departments" Dropdown */}
-        {/* <div className="dropdown">
+      {/* "All Departments" Dropdown */}
+      {/* <div className="dropdown">
           <button
             className="all-departments"
             onClick={() => setDropdownOpen(!dropdownOpen)}
@@ -72,8 +79,8 @@ const Navbar = () => {
           )}
         </div> */}
 
-        {/* Navigation Links */}
-        {/* <ul className="nav-links">
+      {/* Navigation Links */}
+      {/* <ul className="nav-links">
           <li>Home</li>
           <li>Shop ▼</li>
           <li>Stores ▼</li>
