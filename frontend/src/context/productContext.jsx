@@ -42,7 +42,7 @@ const ProductProvider = ({ children }) => {
     }
   };
 
-  const value = { products, addProduct };
+  const value = { products, addProduct, currency: "₹" };
 
   return (
     <ProductContext.Provider value={value}>{children}</ProductContext.Provider>

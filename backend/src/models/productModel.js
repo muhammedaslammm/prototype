@@ -6,12 +6,7 @@ const ProductSchema = new mongoose.Schema({
   product_name: { type: String, required: true },
   price: { type: mongoose.Schema.Types.Decimal128, required: true },
   description: { type: String, required: true },
-  stock: [
-    {
-      size: { type: String, required: true },
-      quantity: { type: Number, required: true },
-    },
-  ],
+  isDeleted: { type: Boolean, default: false },
 });
 
 const Product = mongoose.model("product", ProductSchema);

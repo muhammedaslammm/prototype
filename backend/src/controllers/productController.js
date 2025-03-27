@@ -36,8 +36,16 @@ const addProduct = async (req, res) => {
       price: mongoose.Types.Decimal128.fromString(price.toString()),
     });
     const product = await new_product.save();
+    const formattedProduct = {
+      ...product.toObject(),
+      price: product.price.toString(),
+    };
     console.log("product created");
-    res.json({ success: true, message: "product created", product });
+    res.json({
+      success: true,
+      message: "product created",
+      product: formattedProduct,
+    });
   } catch (error) {
     console.log("server error :", error);
     res.status(500).json({ success: false, error: error.message });
@@ -48,7 +56,15 @@ const addProduct = async (req, res) => {
 const getProducts = async (req, res) => {
   try {
     const products = await Product.find();
-    res.json({ success: true, message: "products fetched from db", products });
+    const formatedProducts = products.map((product) => ({
+      ...product.toObject(),
+      price: product.price.toString(),
+    }));
+    res.json({
+      success: true,
+      message: "products fetched from db",
+      products: formatedProducts,
+    });
   } catch (error) {
     res.status(500).json({ success: false, message: error.message });
   }
