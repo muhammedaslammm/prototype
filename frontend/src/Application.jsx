@@ -1,5 +1,15 @@
-function Application() {
-  return <div className="application"></div>;
-}
+import React from "react";
+import Navbar from "./components/user/Navbar";
+import Body from "./components/user/Body";
+import "./application.css"
 
-export default Application;
+const App = () => {
+  return (
+    <div>
+      <Navbar />
+      <Body />
+    </div>
+  );
+};
+
+export default App;
