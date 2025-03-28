@@ -8,7 +8,7 @@ import {
 import ClientApp from "./client/ClientApp.jsx";
 import AdminApp from "./admin/AdminApp.jsx";
 import Products from "./admin/pages/Products.jsx";
-import Body from "./client/components/Body.jsx";
+import Home from "./client/pages/Home.jsx";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     element: <ClientApp />,
     children: [
       { index: true, element: <Navigate to="home" /> },
-      { path: "home", element: <Body /> },
+      { path: "home", element: <Home /> },
     ],
   },
   {
