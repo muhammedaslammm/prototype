@@ -1,5 +1,6 @@
 const productData = [
   {
+    id: 1000,
     name: "NutriChoice Digestive",
     category: "Bakery & Biscuites",
     image:
@@ -13,6 +14,7 @@ const productData = [
     ratings: 4.8,
   },
   {
+    id: 1001,
     name: "Kellogg's Original Cereals",
     category: "Instand Food",
     image:
@@ -25,6 +27,7 @@ const productData = [
     ratings: 4.8,
   },
   {
+    id: 1002,
     name: "Cadbury 5 Star Chocolate",
     category: "Bakery & Biscuites",
     image:
@@ -38,6 +41,7 @@ const productData = [
     ratings: 4.9,
   },
   {
+    id: 1003,
     name: "Blueberry Greek Yogurt",
     category: "Dairy, Bread & Eggs",
     image:
@@ -51,6 +55,7 @@ const productData = [
     ratings: 4.7,
   },
   {
+    id: 1004,
     name: "Salted Instant Popcorn",
     category: "Instant Food",
     image:
@@ -63,6 +68,7 @@ const productData = [
     ratings: 4.3,
   },
   {
+    id: 1005,
     name: "Kellogg's Original Cereals",
     category: "Instand Food",
     image:
@@ -75,6 +81,7 @@ const productData = [
     ratings: 4.8,
   },
   {
+    id: 1006,
     name: "Britannia Cheese Slices",
     category: "Diary, Bread & Eggs",
     image:
@@ -87,6 +94,7 @@ const productData = [
     ratings: 4.5,
   },
   {
+    id: 1007,
     name: "Kellogg's Original Cereals",
     category: "Instand Food",
     image:
@@ -99,6 +107,7 @@ const productData = [
     ratings: 4.8,
   },
   {
+    id: 1008,
     name: "Cadbury 5 Star Chocolate",
     category: "Bakery & Biscuites",
     image:
@@ -112,6 +121,7 @@ const productData = [
     ratings: 4.9,
   },
   {
+    id: 1009,
     name: "Blueberry Greek Yogurt",
     category: "Dairy, Bread & Eggs",
     image:
@@ -125,6 +135,7 @@ const productData = [
     ratings: 4.7,
   },
   {
+    id: 1010,
     name: "Haldiram's Sev Bhujia",
     category: "Snack & Munchies",
     image:
@@ -137,6 +148,7 @@ const productData = [
     ratings: 4.2,
   },
   {
+    id: 1011,
     name: "Slurrp Millet Chocolate",
     category: "Snack & Munchies",
     image:
@@ -149,6 +161,7 @@ const productData = [
     ratings: 4.9,
   },
   {
+    id: 1012,
     name: "Cadbury 5 Star Chocolate",
     category: "Bakery & Biscuites",
     image:
@@ -162,6 +175,7 @@ const productData = [
     ratings: 4.9,
   },
   {
+    id: 1013,
     name: "Blueberry Greek Yogurt",
     category: "Dairy, Bread & Eggs",
     image:
