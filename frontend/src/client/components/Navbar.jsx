@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   FaShoppingCart,
   FaUser,
@@ -7,11 +7,8 @@ import {
   FaMapMarkerAlt,
   FaThLarge,
 } from "react-icons/fa";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const Navbar = () => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
   return (
     <header>
       <div className="container">

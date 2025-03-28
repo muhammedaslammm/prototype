@@ -5,13 +5,20 @@ import {
   Navigate,
   RouterProvider,
 } from "react-router-dom";
-import Application from "./Application.jsx";
-import AdminApp from "./adminApp.jsx";
-import Products from "./components/admin/Products.jsx";
-import { ProductProvider } from "./context/productContext.jsx";
+import ClientApp from "./client/ClientApp.jsx";
+import AdminApp from "./admin/AdminApp.jsx";
+import Products from "./admin/pages/Products.jsx";
+import Body from "./client/components/Body.jsx";
 
 const router = createBrowserRouter([
-  { path: "/", element: <Application /> },
+  {
+    path: "/",
+    element: <ClientApp />,
+    children: [
+      { index: true, element: <Navigate to="home" /> },
+      { path: "home", element: <Body /> },
+    ],
+  },
   {
     path: "/admin",
     element: <AdminApp />,
@@ -24,8 +31,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <ProductProvider>
-      <RouterProvider router={router} />
-    </ProductProvider>
+    <RouterProvider router={router} />
   </StrictMode>
 );

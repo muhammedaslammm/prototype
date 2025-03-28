@@ -1,6 +1,6 @@
-import Body from "./components/admin/Body.jsx";
-import Header from "./components/admin/Header.jsx";
-import "./index.css";
+import Body from "./components/Body.jsx";
+import Header from "./components/Header.jsx";
+import "./styles/adminApp.css";
 
 const AdminApp = () => {
   return (
