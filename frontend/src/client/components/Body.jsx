@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Banner from "./Banner";
 
-function Body()  {
-    return (
-      <div className='banner'>
-        <button>Show Now<i className="fa-solid fa-arrow-right"></i></button>
-      </div>
-    )
+function Body() {
+  return (
+    <div className="application__body">
+      <Banner />
+    </div>
+  );
 }
 
 export default Body;
